@@ -1,42 +1,125 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rinterio</title>
     <!-- google fonts cdn -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-     <!-- font awesome cdn -->
-     <script
-     src="https://kit.fontawesome.com/6e15c13885.js"
-     crossorigin="anonymous"
-   ></script>
-   <!-- tailwind and daisy ui cdn -->
-  
-<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
-   <script>
-     tailwind.config = {
-       theme: {
-         extend: {
-           fontFamily: {
-             manrope: ["Manrope", "sans-serif"],
-            
-           },
-           backgroundImage: {
-             "bg-form": "url('./assets/bg.jpg')",
-           },
-           colors: {
-             primary: "#ABEF5F",
-           },
-         },
-       },
-     };
-   </script>
-</head>
-<body class="font-manrope">
-        <h2>Hello</h2>
-</body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome cdn -->
+    <script
+      src="https://kit.fontawesome.com/6e15c13885.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- tailwind and daisy ui cdn -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              manrope: ["Manrope", "sans-serif"],
+            },
+            backgroundImage: {
+              "bg-form": "url('./assets/bg.jpg')",
+            },
+            colors: {
+              primary: "#ABEF5F",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-slate-50 font-manrope">
+    <header
+      class="sticky top-0 left-0 z-50 max-w-screen-xl mx-auto py-6 bg-white px-6 md:px-8"
+    >
+      <nav class="flex justify-between items-center">
+        <div>
+          <button class="flex justify-between items-center gap-1">
+            <i
+              class="fa-solid fa-arrow-right bg-[#ABEF5F] p-1 text-sm h-7 w-7 rounded-full -rotate-45"
+            ></i>
+            <a href="#" class="text-2xl font-semibold">Rinterio</a>
+          </button>
+        </div>
+        <div class="hidden lg:block">
+          <ul class="flex items-center gap-6 text-gray-500 font-semibold">
+            <li class="hover:text-black"><a href="#home">Home</a></li>
+            <li class="hover:text-black"><a href="#about-us">About Us</a></li>
+            <li class="hover:text-black"><a href="#services">Services</a></li>
+            <li class="hover:text-black"><a href="#blogs">Blogs</a></li>
+            <li class="hover:text-black">
+              <a href="#contact-us">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex items-center gap-6">
+          <i
+            class="hidden md:block fa-solid fa-magnifying-glass border border-gray-200 rounded-full p-2"
+          ></i>
+          <i
+            class="hidden md:block fa-solid fa-cart-shopping border border-gray-200 rounded-full p-2"
+          ></i>
+          <button
+            class="hidden md:block w-full md:w-fit bg-primary rounded-3xl px-3 py-2 font-semibold"
+          >
+            Book Consultant<i
+              class="fa-solid fa-arrow-right bg-black text-white ml-1 p-1 text-sm h-7 w-7 rounded-full -rotate-45"
+            ></i>
+          </button>
+
+          <div class="lg:hidden dropdown dropdown-end">
+            <div tabindex="0" role="button" class="m-1">
+              <i class="fa-solid fa-bars text-xl"></i>
+            </div>
+            <ul
+              tabindex="0"
+              class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 md:w-64 p-2 shadow text-gray-500"
+            >
+              <li class="hover:text-black"><a href="#home">Home</a></li>
+              <li class="hover:text-black"><a href="#about-us">About Us</a></li>
+              <li class="hover:text-black"><a href="#services">Services</a></li>
+              <li class="hover:text-black"><a href="#blogs">Blogs</a></li>
+              <li class="hover:text-black">
+                <a href="#contact-us">Contact Us</a>
+              </li>
+              <div class="md:hidden">
+                <div class="flex justify-start items-center gap-5 px-3 py-2">
+                  <i
+                    class="fa-solid fa-magnifying-glass border border-gray-400 rounded-full p-2"
+                  ></i>
+                  <i
+                    class="fa-solid fa-cart-shopping border border-gray-400 rounded-full p-2"
+                  ></i>
+                </div>
+                <button
+                  class="w-full md:w-fit bg-[#ABEF5F] rounded-3xl px-3 py-2 font-medium"
+                >
+                  Book Consultant<i
+                    class="fa-solid fa-arrow-right bg-black text-white ml-1 p-1 text-sm h-7 w-7 rounded-full -rotate-45"
+                  ></i>
+                </button>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="max-w-screen-xl mx-auto bg-gray-100"></main>
+    <footer></footer>
+  </body>
 </html>
